@@ -1,168 +1,187 @@
 :root {
-    --main-color: rgb(1, 36, 186);
-    --accent-color: rgb(9, 216, 98);
-    --text-color: rgb(53, 53, 53);
-    --main-font: "Montserrat", arial;
-    --font-bold: 700;
+  --main-color: rgb(1, 36, 186);
+  --accent-color: rgb(9, 216, 98);
+  --text-color: rgb(53, 53, 53);
+  --main-font: "Montserrat", arial;
+  --font-bold: 700;
 }
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-html, body {
-    height: 100%;
-    background-image: url('../images/background.jpg');
-    font-family: var(--main-font);
-    
+html,
+body {
+  height: 100%;
+  background-image: url("../images/background.jpg");
+  font-family: var(--main-font);
 }
 .main {
-    height: calc(100vh - 80px);
-    display: flex;
+  height: calc(100vh - 80px);
+  display: flex;
   justify-content: center;
   align-items: center;
-    
 }
 .container {
-    max-width: 1100px;
-    display: flex;
-    align-items: center; 
-    margin: 0 15em;
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 2em;
 }
 .header {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 15em;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 2em;
+  align-items: center;
 }
 .logo a {
-    text-decoration: none;
-    font-size: 2.5rem;
-    font-weight: var(--font-weight);
-    color: var(--main-color);
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: var(--font-bold);
+  color: var(--main-color);
 }
 .nav_list {
-    display: flex;
-    justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
 }
 .nav_list li a {
-    text-decoration: none;
-    padding: 40px;
-    color: var(--text-color);
-    font-weight: bold;
+  text-decoration: none;
+  padding: 40px;
+  color: var(--text-color);
+  font-weight: bold;
 }
 .nav_list li {
-display: flex;
+  display: flex;
 }
 .nav_list li a:hover {
-    color: var(--accent-color);
-    transition: 0.3s;
+  color: var(--accent-color);
+  transition: 0.3s;
 }
 
 /* główna */
 
 .main__intro {
-    display: flex;
-    align-items: flex-start;
-    gap: 100px;
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
 }
 .info__small-heading {
-    font-weight: var(--font-bold);
-    font-size: 1.5rem;
-    color: var(--accent-color);
+  font-weight: var(--font-bold);
+  font-size: 1.5rem;
+  color: var(--accent-color);
 }
 .info__heading {
-    font-weight: var(--font-bold);
-font-size: 4rem;
-color: var(--main-color);
+  font-weight: var(--font-bold);
+  font-size: 4rem;
+  color: var(--main-color);
 }
 
+/* ikony */
+
 .info__icons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 80px;
-    gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  gap: 20px;
 }
-.icons__item:first-child,
-.icons__item:nth-child(2),
-.icons__item:nth-child(3) {
-    font-weight: bold;
-    font-family: "Font Awesome 5 Free";
-    color: var(--text-color);
-    font-size: 1rem;
-    font-weight: 600;
-    position: relative;
+.icons__item {
+  font-weight: bold;
+  font-family: "Font Awesome 5 Free";
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 600;
+  position: relative;
 }
-.icons__item:first-child::before {
-    content: "\f0c2";
-    color: var(--accent-color);
-    font-size: 2rem;
-    font-weight: var(--font-bold);
-    display: flex;
-    flex-direction: column;
+.icons__item::before {
+  content: "\f2f2";
+  color: var(--accent-color);
+  font-size: 2rem;
+  font-weight: var(--font-bold);
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+}
+
+.icons__item:nth-child(1)::before {
+  content: "\f0c2";
 }
 .icons__item:nth-child(2)::before {
-    content: "\f3d1";
-    color: var(--accent-color);
-    font-size: 2rem;
-    font-weight: var(--font-bold);
-    display: flex;
-    flex-direction: column;
-   
+  content: "\f3d1";
 }
 .icons__item:nth-child(3)::before {
-    content: "\f2f2";
-    color: var(--accent-color);
-    font-size: 2rem;
-    font-weight: var(--font-bold);
-    display: flex;
-    flex-direction: column;
+  content: "\f2f2";
 }
 
 /* formularz */
 .intro__form {
-    background-color: #fff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .13);
-    border-radius: 8px;
-    padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.13);
+  border-radius: 8px;
+  padding: 30px;
 }
 .form__heading {
-    font-size: 2rem;
-    font-weight: var(--font-bold);
-    color: var(--text-color);
-    padding-bottom: 30px;
+  font-size: 2rem;
+  font-weight: var(--font-bold);
+  color: var(--text-color);
+  padding-bottom: 30px;
 }
 .form__field label {
-    margin-top: 12px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--text-color);
-    display: block;
-    padding-bottom: 8px;
+  margin-top: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-color);
+  display: block;
+  padding-bottom: 8px;
 }
 
 .form__field input {
-    margin-bottom: 0.5rem;
-    padding: 8px 4px;
-    border: 0;
-    border-bottom: 1px solid #ddd;
-    width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 8px 4px;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
 }
 .form__field input:focus {
-    box-shadow: 0 0 3px var(--main-color);
-    border-radius: 2px;
-    transition: 0.1s;
+  box-shadow: 0 0 3px var(--main-color);
+  border-radius: 2px;
+  transition: 0.1s;
 }
 .form__button {
-    padding: 20px 30px;
-    border: 0;
-    background-color: var(--accent-color);
-    color: #fff;
-    border-radius: 8px;
-    margin-top: 40px;
-font-weight: bold;
+  padding: 20px 30px;
+  border: 0;
+  background-color: var(--accent-color);
+  color: #fff;
+  border-radius: 8px;
+  margin-top: 40px;
+  font-weight: bold;
 }
 .form__button:hover {
-    box-shadow: 1px 1px 6px rgb(46, 236, 129);
-    transition: 0.3s;
+  box-shadow: 1px 1px 6px rgb(46, 236, 129);
+  transition: 0.3s;
+}
+
+/*media*/
+@media (max-width: 768px) {
+    .container,
+    .header {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 2em;
+    }
+    
+    .main__intro {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .info__heading {
+        font-size: 3rem;
+    }
+
+    .form__button {
+        width: 100%;
+    }
 }
